@@ -25,7 +25,7 @@ class linkedList{
 		};
 		typedef node* link;
 		typedef link Node;		//link effectively points to node.
-		Node head;				//stores the address for first node
+		Node head, current;				//stores the address for first node
 		int size;				//stores the current size of the list
 	public:
 		linkedList();			//Constructor to initialize linked list
@@ -33,6 +33,9 @@ class linkedList{
 		int size();				//Returns current size of the list
 		void push(T);		//Adds a node at the top
 		int insertAt(T, int);		//Inserts a new node at the i th position from the top
+		T pop ();					//Pops the last element and deletes the node
+		T delete_at(int);			//Deletes value at certain place
+		T returnValue();			//Returns value stored at current node 
 };
 
 linkedList::linkedList(){	//Initializes first node and size to 0
