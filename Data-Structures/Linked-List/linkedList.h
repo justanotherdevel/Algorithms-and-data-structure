@@ -43,25 +43,30 @@ class linkedList{
 		T returnValue();			//Returns value stored at current node 
 };
 
-linkedList::linkedList(){			//Initializes first node and size to 0
+template <typename T>
+linkedList<T>::linkedList(){			//Initializes first node and size to 0
 	head = 0;
 	size = 0;
 }
 
-bool linkedList::isEmpty () const{
+template <typename T>
+bool linkedList<T>::isEmpty () const{
 	head == 0;
 }
 
-int linkedList::size () const{
+template <typename T>
+int linkedList<T>::size() const{
 	return size;
 }
 
-int linkedList::push (T val){
+template <typename T>
+int linkedList<T>::push (T val){
 	Node add (val, head);			//Creates a new node and links it to head
 	head = add;						//Head now points to the new node
 }
 
-void linkedList::insertAt (T x){
+template <typename T>
+void linkedList<T>::insertAt (T x){
 }
 
 #endif
